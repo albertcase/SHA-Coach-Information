@@ -11,15 +11,26 @@ class ApiController extends Controller {
 		exit;
 	}
 
-	public function isloginAction() {
+	public function submitAction() {
 		$UserAPI = new \Lib\UserAPI();
 		$user = $UserAPI->userLoad(true);
 		if (!$user) {
 			return $this->statusPrint(0, '未登录');
 		}
-		return $this->statusPrint(1, $user);
+		$request = $this->Request();
+		$fields = array(
+			'name' => array('notnull', '3'),
+			'mobile' => array('mobile', '3'),
+			'address' => array('notnull', '3')
+		);
+		$request->validation($fields);
+		$name = $request->request->get('name');
+		$mobile = $request->request->get('mobile');
+		$address = $request->request->get('address');
+		$databaseapi = new \Lib\DatabaseAPI();
+		$databaseapi->saveInfo($user->openid, $name, $mobile, $address);
+		return $this->statusPrint(1, '提交成功');
 	}
-
 
 	public function callbackAction() {
 		// $user_agent = $_SERVER['HTTP_USER_AGENT'];
