@@ -1,0 +1,435 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.animate {
+  animation-duration: 600ms;
+  -webkit-animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.fade {
+  animation-name: fade;
+  -webkit-animation-name: fade;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.delay1 {
+  animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+}
+
+.delay2 {
+  animation-delay: 1600ms;
+  -webkit-animation-delay: 1600ms;
+}
+
+.delay3 {
+  animation-delay: 2400ms;
+  -webkit-animation-delay: 2400ms;
+}
+
+.delay4 {
+  animation-delay: 3200ms;
+  -webkit-animation-delay: 3200ms;
+}
+
+.delay5 {
+  animation-delay: 4000ms;
+  -webkit-animation-delay: 4000ms;
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.error {
+  display: block;
+  width: 5rem;
+  color: #FFFFFF;
+  font-size: 0.2rem;
+  text-align: center;
+  margin: 0.1rem auto;
+}
+
+.btn-close {
+  position: relative;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0rem auto 0rem;
+  left: -0.1rem;
+}
+.btn-close:after {
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #c0a176;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.btn-close:before {
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #c0a176;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+body {
+  font: 0.24rem/1.5 sans-serif;
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.wrapper.landscape {
+  background-size: 100%;
+}
+
+.pin {
+  opacity: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  overflow: hidden;
+  transition: opacity 0.6s;
+  -ms-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  animation-duration: 600ms;
+  -webkit-animation-duration: 600ms;
+}
+.pin.current {
+  opacity: 1;
+  z-index: 100;
+}
+
+.ajaxpop {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: 5px;
+}
+.ajaxpop .loading {
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+  top: 50%;
+  left: 50%;
+  margin-left: -1.1rem;
+  margin-top: -0.6rem;
+  line-height: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem;
+  border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+.ajaxpop .icon-loading {
+  display: inline-block;
+  position: relative;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 4px;
+  vertical-align: middle;
+  border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+.ajaxpop .icon-loading:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  -webkit-animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.popup {
+  position: absolute;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.qrcode-pop {
+  background: rgba(255, 255, 255, 0.9);
+}
+.qrcode-pop .inner {
+  position: absolute;
+  width: 4rem;
+  height: 5rem;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.qrcode-pop .qrcode {
+  width: 3.15rem;
+  height: 3.15rem;
+  margin: 0rem auto 0.5rem;
+}
+
+.logo {
+  width: 2.93rem;
+  height: 1.09rem;
+  margin: 1.4rem auto 1.2rem;
+}
+
+input[type='text'],
+input[type='tel'] {
+  width: 4rem;
+  height: 0.7rem;
+  border: #e2e2e2 1px solid;
+  background: #fafafa;
+  border-radius: 0;
+}
+
+.input-box {
+  margin-bottom: 0.6rem;
+}
+.input-box label {
+  position: relative;
+  display: inline-block;
+  padding-left: 0.6rem;
+  color: #535353;
+  font-size: 0.26rem;
+}
+.input-box label:before {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url("../images/icon-sprite.png") no-repeat;
+  background-size: 2.38rem auto;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+.input-box label.label-phone:before {
+  background-position: 0 27%;
+}
+.input-box label.label-address:before {
+  background-position: 0 55%;
+}
+
+.form-info {
+  text-align: center;
+}
+.form-info .form-btn-submit {
+  margin: 0 auto;
+  width: 2.38rem;
+  height: 0.7rem;
+  background: url("../images/icon-sprite.png") no-repeat;
+  background-size: 2.38rem auto;
+  background-position: 0 100%;
+}
+
+#__bs_notify__ {
+  display: none !important;
+}
