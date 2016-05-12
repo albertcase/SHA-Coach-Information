@@ -1,32 +1,6 @@
-function gotoPin(i) {
-	var $pin = $('.wrapper .pin');
-	$pin.removeClass('current').eq(i).addClass('current');
-}
-
 ;(function(){
 	var ua = navigator.userAgent.toLowerCase();
 	var Common = {
-		goHomepage:function(){
-			gotoPin(0);
-		},
-		goWriteGreetingPage:function(){
-			gotoPin(1);
-		},
-		goMyPhotoPage:function(){
-			gotoPin(5);
-		},
-		goGallerypage:function(){
-			window.location.href='gallery.html';
-		},
-		goMobilePage:function(){
-			gotoPin(2);
-		},
-		goInfoPage:function(){
-			gotoPin(3);
-		},
-		isWx:function(){
-			return (/micromessenger/.test(ua)) ? true:false;
-		},
 		msgBox:function(msg,long){
 			if(long){
 				$('body').append('<div class="ajaxpop msgbox minwidthbox"><div class="loading">'+msg+'</div></div>');
@@ -48,7 +22,14 @@ function gotoPin(i) {
 				}
 			}
 		},
-
+		alertBox:{
+			add:function(msg){
+				$('body').append('<div class="alertpop msgbox"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-alert-ok">是</div></div></div>');
+			},
+			remove:function(){
+				$('.alertpop').remove();
+			}
+		},
 
 	};
 

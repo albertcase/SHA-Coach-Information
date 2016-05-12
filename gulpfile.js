@@ -11,10 +11,9 @@ var gulp = require('gulp'),
 //Define the app path
 var path = {
     all:['template/develop/*.html','./app/css/*.css','./app/js/*.js'],
-    template:['./template/index.html'],
+    template:['./template/develop/index.html'],
     css:['./app/css/*.css'],
-    js:['./app/js/*.js','!app/js/widget.js'],
-    index_incluede_js:['./app/js/lib/zepto.min.js','./app/js/lib/pre-loader.js','./app/js/rem.js','./app/js/weixinshare.js','./app/js/api.js','./app/js/common.js','./app/js/index.js'],
+    js:['./app/js/lib/zepto.min.js','./app/js/rem.js','./app/js/api.js','./app/js/common.js','./app/js/controller.js'],
     images:['./app/images/*.*']
 };
 
@@ -53,9 +52,9 @@ gulp.task('js', function () {
 
 //generate index.tpl.php
 gulp.task('generate_index',['css','js'], function () {
-    var target = gulp.src('./template/index.html');
+    var target = gulp.src('./template/develop/index.html');
     // It's not necessary to read the files (will speed up things), we're only after their paths:
-    var sources = gulp.src(['./app/js/widget/widget.js', './app/css/style.css'], {read: false});
+    var sources = gulp.src(['./app/js/widget.js', './app/css/style.css'], {read: false});
 
     return target.pipe(inject(sources))
         .pipe(rename('index.tpl.php'))
