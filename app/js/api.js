@@ -9,6 +9,7 @@ Api = {
             dataType:'json',
             data:obj,
             success:function(data){
+                $('.ajaxpop').remove();
                 return callback(data);
             }
         });
