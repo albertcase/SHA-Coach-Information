@@ -29,7 +29,7 @@
                 Common.errorMsg.add(inputMobile.parent(),'手机不能为空');
                 validate = false;
             }else{
-                var reg=/^1\d{10}$/;
+                var reg=/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
                 if(!(reg.test(inputMobile.val()))){
                     validate = false;
                     Common.errorMsg.add(inputMobile.parent(),'手机号格式错误，请重新输入');
