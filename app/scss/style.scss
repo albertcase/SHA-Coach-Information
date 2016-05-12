@@ -266,9 +266,10 @@ body{
   .btn-alert-ok{
     position: absolute;
     right: 0.1rem;
-    top: 0;
+    top: 0.1rem;
     @include size(0.3rem,0.3rem);
     text-indent: -999em;
+    z-index: 100;
     &:after{
       content: '';
       display: block;
@@ -276,7 +277,7 @@ body{
       background: #535353;
       @include transform(rotate(-45deg));
       position: absolute;
-      bottom: 0;
+      top: 50%;
       left: 0;
     }
     &:before{
@@ -286,7 +287,7 @@ body{
       background: #535353;
       @include transform(rotate(45deg));
       position: absolute;
-      bottom: 0;
+      top: 50%;
       right: 0;
     }
   }

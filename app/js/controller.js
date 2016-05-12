@@ -90,12 +90,8 @@
         },
         closePop:function(){
           $('body').on('touchstart','.btn-alert-ok',function(){
-
-              if (confirm("Close Window?")) {
-                  close();
-              }else{
-                  $('.alertpop').remove();
-              }
+              //alert(0);
+              WeixinJSBridge.call('closeWindow');
           });
         },
 
