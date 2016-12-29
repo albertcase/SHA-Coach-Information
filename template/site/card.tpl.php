@@ -42,7 +42,7 @@
         <img src="/app/images/logo.png" alt=""/>
     </div>
     <div class="tips">
-        <img src="/images/card-tips.png" alt=""/>
+        欢迎加入COACH VIP计划
     </div>
 </div>
 <!--End page-->
