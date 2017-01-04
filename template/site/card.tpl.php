@@ -44,6 +44,7 @@
     <div class="tips">
         欢迎加入COACH VIP计划
     </div>
+    <center><input type="button" value="领取" onclick="showcard()"></center>
 </div>
 <!--End page-->
 <script type="text/javascript">
