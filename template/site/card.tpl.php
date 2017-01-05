@@ -42,7 +42,11 @@
         <img src="/app/images/logo.png" alt=""/>
     </div>
     <div class="tips">
-        欢迎加入COACH VIP计划
+        欢迎加入COACH VIP计划！
+        </br>
+        点击领取VIP欢迎礼券
+        <br>
+        
     </div>
     <center><input type="button" value="领取" onclick="showcard()"></center>
 </div>
