@@ -45,9 +45,9 @@
         欢迎加入COACH VIP计划！
         </br>
         点击领取VIP欢迎礼券
-        </br>
-        
     </div>
+    </br>
+    </br>
     <center><input type="button" value="领取" onclick="showcard()"></center>
 </div>
 <!--End page-->
