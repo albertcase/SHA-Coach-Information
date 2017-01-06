@@ -48,7 +48,7 @@
     </div>
     </br>
     </br>
-    <center><input type="button" value="领取" onclick="showcard()"></center>
+    <center><a href="javascript:void(0)" onclick="showcard()">领取</a></center>
 </div>
 <!--End page-->
 <script type="text/javascript">
