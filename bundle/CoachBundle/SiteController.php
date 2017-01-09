@@ -26,7 +26,7 @@ class SiteController extends Controller {
 	public function cardAction() {
 		//600 pKCDxjrwNnpwUXTcyqzi2R3NZRCQ
 		//800 pKCDxjm3GDEKbK19j_SH7VqFAaag
-		$card = 'pqQW1w60P4UMUnUJiYg-azQSODB4';
+		$card = 'pKCDxjrfCYV_4WKNukqe35fS7UBY';
 		//$card = array('600'=>'pGXbRsjjVihQHceLiRMgpFWDkNtU', '800'=>'pGXbRssyzDNSGX7qa6D689Vi_700');
 		//$card = array('600'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ', '800'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ');
 	
@@ -39,7 +39,7 @@ class SiteController extends Controller {
 	public function card2Action() {
 		//600 pKCDxjrwNnpwUXTcyqzi2R3NZRCQ
 		//800 pKCDxjm3GDEKbK19j_SH7VqFAaag
-		$card = 'pqQW1w2a1L6VtbJ6ugU01PPy_OZ0';
+		$card = 'pKCDxjglntu3ThaHvCTG1WfEHeB0';
 		//$card = array('600'=>'pGXbRsjjVihQHceLiRMgpFWDkNtU', '800'=>'pGXbRssyzDNSGX7qa6D689Vi_700');
 		//$card = array('600'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ', '800'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ');
 	
@@ -52,7 +52,7 @@ class SiteController extends Controller {
 	public function card3Action() {
 		//600 pKCDxjrwNnpwUXTcyqzi2R3NZRCQ
 		//800 pKCDxjm3GDEKbK19j_SH7VqFAaag
-		$card = 'pqQW1w6AhUWw8zC7TrbGY0PHGHCo';
+		$card = 'pKCDxjvTwVcUEoeVNihzr_1RRmSI';
 		//$card = array('600'=>'pGXbRsjjVihQHceLiRMgpFWDkNtU', '800'=>'pGXbRssyzDNSGX7qa6D689Vi_700');
 		//$card = array('600'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ', '800'=>'pKCDxji6wCVuB38LBgBTx3U2yBoQ');
 	
