@@ -34,6 +34,16 @@
         }
 
     </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?a3e67ab8ff4a42f427abbd8e8a91f1ba";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 <body>
 <!--Start page-->
@@ -48,7 +58,7 @@
     </div>
     </br>
     </br>
-    <center><a href="javascript:void(0)" onclick="showcard()">领取</a></center>
+    <center><a href="javascript:void(0)" onclick="showcard(); _hmt.push(['_trackEvent', 'click', 'btn', 'card<?php print $card;?>']);">领取</a></center>
 </div>
 <!--End page-->
 <script type="text/javascript">
