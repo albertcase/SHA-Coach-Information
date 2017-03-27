@@ -52,7 +52,7 @@
         <img src="/app/images/logo.png" alt=""/>
     </div>
     </br>
-    <center><a href="javascript:void(0)" onclick="showcard(); _hmt.push(['_trackEvent', 'click', 'btn', 'card<?php print $card;?>']);">领取</a></center>
+    <center><a href="javascript:void(0)" onclick="showcard();">领取</a></center>
 </div>
 <!--End page-->
 <script type="text/javascript">
