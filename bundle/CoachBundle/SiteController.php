@@ -71,7 +71,7 @@ class SiteController extends Controller {
 	
 		$wechatapi = new \Lib\WechatAPI();
 		$list = $wechatapi->cardList($card);
-		$this->render('site/card', array('list'=>$list));
+		$this->render('site/ffcard', array('list'=>$list));
 		exit;
 	}
 
