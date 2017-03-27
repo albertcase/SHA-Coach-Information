@@ -32,7 +32,7 @@ class SiteController extends Controller {
 	
 		$wechatapi = new \Lib\WechatAPI();
 		$list = $wechatapi->cardList($card);
-		$this->render('site/card', array('list'=>$list));
+		$this->render('site/card', array('list'=>$list, 'card' => 1));
 		exit;
 	}
 
@@ -45,7 +45,7 @@ class SiteController extends Controller {
 	
 		$wechatapi = new \Lib\WechatAPI();
 		$list = $wechatapi->cardList($card);
-		$this->render('site/card', array('list'=>$list));
+		$this->render('site/card', array('list'=>$list, 'card' => 2));
 		exit;
 	}
 
@@ -58,7 +58,7 @@ class SiteController extends Controller {
 	
 		$wechatapi = new \Lib\WechatAPI();
 		$list = $wechatapi->cardList($card);
-		$this->render('site/card', array('list'=>$list));
+		$this->render('site/card', array('list'=>$list, 'card' => 3));
 		exit;
 	}
 
