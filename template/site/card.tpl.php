@@ -20,7 +20,7 @@
 
 </head>
 <body>
-
+<p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10"></p>
 <script type="text/javascript">
 var cardListJSON = <?php echo json_encode($list);?>;
 function showcard() {
@@ -31,6 +31,7 @@ function showcard() {
         }],
         success: function(res) {
             var cardList = res.cardList;
+            $('.card').text('卡券领取成功！');
             //alert(JSON.stringfiy(res));
         },
         fail: function(res) {

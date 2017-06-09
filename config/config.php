@@ -31,7 +31,7 @@ define('CARD_LIST', '
         "card2" : {
             "600" : "pKCDxjrwNnpwUXTcyqzi2R3NZRCQ",
             "800" : "pKCDxjm3GDEKbK19j_SH7VqFAaag"
-        }
+        },
         "card3" : "pKCDxjvTwVcUEoeVNihzr_1RRmSI",
         "ffcard" : "pKCDxjvDoy5qyE2C_xnh5t6Rr5aI"
 }');
