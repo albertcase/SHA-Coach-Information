@@ -33,7 +33,6 @@ class Core {
                 self::sendResponse($callback, $matches);
             }
         }
-        echo '<center><h1>404 page not found!</h1></center>';
     }
 
     static private function sendResponse($callback, $arg) {

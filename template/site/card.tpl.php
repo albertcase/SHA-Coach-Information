@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10">dsadsa</p>
+<p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10"></p>
 <script type="text/javascript">
 var cardListJSON = <?php echo json_encode($list);?>;
 function showcard() {
@@ -32,7 +32,7 @@ function showcard() {
         success: function(res) {
             var cardList = res.cardList;
             $('.card').text('卡券领取成功！');
-            //alert(JSON.stringfiy(res));
+            alert(JSON.stringfiy(res));
         },
         fail: function(res) {
             //alert(JSON.stringfiy(res));
@@ -51,7 +51,6 @@ function showcard() {
 
 //hide weixin share button
 wx.ready(function(){
-    showcard();
     // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
 
     wx.hideOptionMenu();
@@ -61,7 +60,7 @@ wx.ready(function(){
     wx.hideAllNonBaseMenuItem();
 });
 
-
+showcard();
 </script>
 </body>
 </html>
