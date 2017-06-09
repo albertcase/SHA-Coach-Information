@@ -31,14 +31,11 @@ function showcard() {
             cardExt: '{"timestamp":"'+cardListJSON[0].cardExt.timestamp+'","signature":"'+cardListJSON[0].cardExt.signature+'","openid":"'+cardListJSON[0].cardExt.openid+'","code":"'+cardListJSON[0].cardExt.code+'"}'
         }],
         success: function(res) {
-            alert('卡券领取成功！');
             var cardList = res.cardList;
-//            $('.card').text('卡券领取成功！');
-//            alert(JSON.stringfiy(res));
-            alert('卡券领取成功！');
+            $('.card').text('卡券领取成功！');
+            //alert(JSON.stringfiy(res));
         },
         fail: function(res) {
-            alert(22);
             //alert(JSON.stringfiy(res));
         },
         complete: function(res) {
@@ -55,7 +52,7 @@ function showcard() {
 
 //hide weixin share button
 wx.ready(function(){
-    
+
     // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
 
     wx.hideOptionMenu();
