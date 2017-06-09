@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 //Redis config info
 define("REDIS_HOST", '127.0.0.1');
@@ -21,8 +21,21 @@ define("CURIO_JS_ID", '912e9ed6-7426-49c0-98f2-903fa4bf0d7a');
 //Database config info
 define("DBHOST", '127.0.0.1');
 define("DBUSER", 'root');
-define("DBPASS", '1qazxsw2');
+define("DBPASS", '');
 define("DBNAME", 'coach_information');
+
+//CardList
+define('CARD_LIST', '
+    {
+        "card1" : "pKCDxjrfCYV_4WKNukqe35fS7UBY",
+        "card2" : {
+            "600" : "pKCDxjrwNnpwUXTcyqzi2R3NZRCQ",
+            "800" : "pKCDxjm3GDEKbK19j_SH7VqFAaag"
+        }
+        "card3" : "pKCDxjvTwVcUEoeVNihzr_1RRmSI",
+        "ffcard" : "pKCDxjvDoy5qyE2C_xnh5t6Rr5aI"
+}');
+
 
 
 
