@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" >
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/912e9ed6-7426-49c0-98f2-903fa4bf0d7a/wechat"></script>
+    <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/912e9ed6-7426-49c0-98f2-903fa4bf0d7a/wechat?debug=true"></script>
 <!--    <script type="text/javascript" src="/dist/js/lib/zepto.min.js"></script>-->
     <script>
         var _hmt = _hmt || [];
@@ -23,7 +23,6 @@
 <p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10"></p>
 <script type="text/javascript">
 var cardListJSON = <?php echo json_encode($list);?>;
-alert('卡券领取成功2312！');
 function showcard() {
      wx.addCard({
         cardList: [{
@@ -38,6 +37,7 @@ function showcard() {
             alert('卡券领取成功！');
         },
         fail: function(res) {
+            alert(22);
             //alert(JSON.stringfiy(res));
         },
         complete: function(res) {
