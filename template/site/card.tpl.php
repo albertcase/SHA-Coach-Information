@@ -7,7 +7,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/912e9ed6-7426-49c0-98f2-903fa4bf0d7a/wechat"></script>
-    <script type="text/javascript" src="/dist/js/lib/zepto.min.js"></script>
+<!--    <script type="text/javascript" src="/dist/js/lib/zepto.min.js"></script>-->
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -31,8 +31,9 @@ function showcard() {
         }],
         success: function(res) {
             var cardList = res.cardList;
-            $('.card').text('卡券领取成功！');
-            alert(JSON.stringfiy(res));
+//            $('.card').text('卡券领取成功！');
+//            alert(JSON.stringfiy(res));
+            alert('卡券领取成功！');
         },
         fail: function(res) {
             //alert(JSON.stringfiy(res));
