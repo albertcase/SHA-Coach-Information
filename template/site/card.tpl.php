@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10"></p>
+<p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10">dsadsa</p>
 <script type="text/javascript">
 var cardListJSON = <?php echo json_encode($list);?>;
 function showcard() {

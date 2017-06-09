@@ -24,22 +24,15 @@ class SiteController extends Controller {
         exit;
     }
 
-    public function cardAction() {
-        if(empty($card)){
-            $this->render('site/index');
-        }else {
-            $cardList = json_decode(CARD_LIST, 1);
-            if(!array_key_exists($card, $cardList)) {
-                die('cardid not known');
-            }
-            $wechatapi = new \Lib\WechatAPI();
-            $list = $wechatapi->cardList($cardList[$card]);
-
-            $this->render('site/card', array('list'=>$list));
+    public function cardAction($card) {
+        $card = 'card' . $card;
+        $cardList = json_decode(CARD_LIST, 1);
+        if(!array_key_exists($card, $cardList)) {
+            die('cardid not known');
         }
+        $wechatapi = new \Lib\WechatAPI();
+        $list = $wechatapi->cardList($cardList[$card]);
+        $this->render('site/card', array('list'=>$list));
         exit;
     }
-
-
-
 }
