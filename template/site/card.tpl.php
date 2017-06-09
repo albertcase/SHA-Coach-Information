@@ -23,6 +23,7 @@
 <p class="card" style="width: 100%; padding: 10px auto; text-align: center; position: absolute; left: 0; top: 0; z-index: 10"></p>
 <script type="text/javascript">
 var cardListJSON = <?php echo json_encode($list);?>;
+alert('卡券领取成功2312！');
 function showcard() {
      wx.addCard({
         cardList: [{
@@ -30,6 +31,7 @@ function showcard() {
             cardExt: '{"timestamp":"'+cardListJSON[0].cardExt.timestamp+'","signature":"'+cardListJSON[0].cardExt.signature+'","openid":"'+cardListJSON[0].cardExt.openid+'","code":"'+cardListJSON[0].cardExt.code+'"}'
         }],
         success: function(res) {
+            alert('卡券领取成功！');
             var cardList = res.cardList;
 //            $('.card').text('卡券领取成功！');
 //            alert(JSON.stringfiy(res));
