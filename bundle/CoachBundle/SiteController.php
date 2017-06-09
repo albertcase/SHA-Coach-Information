@@ -10,9 +10,9 @@ class SiteController extends Controller {
 		$UserAPI = new \Lib\UserAPI();
 		$user = $UserAPI->userLoad(true);
 		if (!$user) {
-			$parameterAry = $_GET;
-			if(count($parameterAry)>0)
-				$url = "/?".http_build_query($parameterAry);
+			$parameterAry = $_SERVER['REQUEST_URI'];
+			if(!empty($parameterAry)>0)
+				$url = "/".$parameterAry;
 			else
 				$url = "/";
 			$_SESSION['redirect_url'] = $url;
