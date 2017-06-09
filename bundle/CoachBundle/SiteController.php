@@ -11,7 +11,7 @@ class SiteController extends Controller {
 		$user = $UserAPI->userLoad(true);
 		if (!$user) {
 			$parameterAry = $_SERVER['REQUEST_URI'];
-			if(!empty($parameterAry)>0)
+			if($parameterAry != '')
 				$url = "/".$parameterAry;
 			else
 				$url = "/";
