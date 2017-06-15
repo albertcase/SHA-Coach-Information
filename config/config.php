@@ -27,7 +27,7 @@ define("DBNAME", 'coach_information');
 //CardList
 define('CARD_LIST', '
     {
-        "card" : "pKCDxjrfCYV_4WKNukqe35fS7UBY",
+        "card1" : "pKCDxjrfCYV_4WKNukqe35fS7UBY",
         "card2" : "pKCDxjglntu3ThaHvCTG1WfEHeB0",
         "card3" : "pKCDxjvTwVcUEoeVNihzr_1RRmSI",
         "ffcard" : "pKCDxjvDoy5qyE2C_xnh5t6Rr5aI"
