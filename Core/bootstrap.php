@@ -24,7 +24,8 @@ class Core {
 
         if(isset($routers[$current_router])) {
             $callback = $routers[$current_router];
-            self::sendResponse($callback, array());
+            $parameter = isset($callback[2]) ? $callback[2] : array();
+            self::sendResponse($callback, $parameter);
         }
         foreach($routers as $router => $callback) {
             $pattern = '/' . preg_replace(array('/\//', '/%/'), array('\/', '(.*)'), $router) . '$/';
